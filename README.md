@@ -1,19 +1,16 @@
 My Linux Configuration Scripts.
 
-- [Usage](#usage)
-- [zsh installation(without root access)](#zsh-installationwithout-root-access)
-- [oh-my-zsh installation](#oh-my-zsh-installation)
-- [install zsh/oh-my-zsh plugins and the powerlevel10k scene](#install-zshoh-my-zsh-plugins-and-the-powerlevel10k-scene)
-- [Other configurations](#other-configurations)
-  - [Terminal Choice](#terminal-choice)
-  - [aliases](#aliases)
-  - [WSL 使用Windows Clash 代理](#wsl-使用windows-clash-代理)
-  - [TODO](#todo)
 
 # Usage
 Simply clone the repository, modify some variables in the scripts, and run the scripts.
 
 If you run scripts by `./xxx.sh`, you might need to run `chmod +x xxx.sh` first. You can also run by `bash xxx.sh`.
+
+
+
+# Linux Machine Configuration
+See `Linux Configuration` Folder
+
 
 # [zsh](https://sourceforge.net/projects/zsh/) installation(without root access)
 set version and install_dir in install_zsh.sh, then run
