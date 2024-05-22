@@ -20,6 +20,9 @@ alias dift="cd /home/zhangjun/dift && act dift"
 
 #gpu monitor
 alias gpu="watch -d -n 0.5 nvidia-smi"
+
+# hugging face mirror, see https://hf-mirror.com/
+export HF_ENDPOINT=https://hf-mirror.com
 ' >> ~/.bashrc
 
 ############## SSH Configuration
