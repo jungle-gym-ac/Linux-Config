@@ -21,6 +21,9 @@ alias dift="cd /home/zhangjun/dift && act dift"
 #gpu monitor
 alias gpu="watch -d -n 0.5 nvidia-smi"
 
+# source .bashrc, frequently used in tmux
+alias src="source ~/.bashrc"
+
 # hugging face mirror, see https://hf-mirror.com/
 export HF_ENDPOINT=https://hf-mirror.com
 ' >> ~/.bashrc
