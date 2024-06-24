@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x
 
 #######GIT Configuration
 if [ -z "$(git config --global user.name)" ]; then
@@ -12,21 +12,13 @@ fi
 
 
 ######## .bashrc configuration
-echo '
-# Conda command shortcuts
-alias act="conda activate"
-alias envl="conda env list"
-alias dift="cd /home/zhangjun/dift && act dift"
+read -p "Do you want to config Bash? (y/n) " configBash
 
-#gpu monitor
-alias gpu="watch -d -n 0.5 nvidia-smi"
+if [ "$configBash" == "y" ]; then
+    cat "bash_config/bashrc_content.sh" >> ~/.bashrc
+    echo "Bash Configuration Done."
+fi
 
-# source .bashrc, frequently used in tmux
-alias src="source ~/.bashrc"
-
-# hugging face mirror, see https://hf-mirror.com/
-export HF_ENDPOINT=https://hf-mirror.com
-' >> ~/.bashrc
 
 ############## SSH Configuration
 
@@ -57,5 +49,24 @@ if [ "$isRemoteServer" == "y" ]; then
 
     echo "Append the content of the public key to authorized_keys."
     cat "$publicKeyLocation" >> ~/.ssh/authorized_keys
+    echo "Done."
+fi
+
+
+
+# Conda Installation
+read -p "Do you want to install Miniconda? (y/n) " installMiniConda
+
+if [ "$installMiniConda" == "y" ]; then
+    echo "Intalling Miniconda."
+
+    # https://docs.anaconda.com/miniconda/#quick-command-line-install
+    mkdir -p ~/Software/miniconda3
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/Software/miniconda3/miniconda.sh
+    bash ~/Software/miniconda3/miniconda.sh -b -u -p ~/Software/miniconda3
+    rm -rf ~/Software/miniconda3/miniconda.sh
+
+    ~/Software/miniconda3/bin/conda init bash
+
     echo "Done."
 fi
