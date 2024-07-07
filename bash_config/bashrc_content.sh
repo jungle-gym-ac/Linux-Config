@@ -14,7 +14,8 @@ alias act="conda activate"
 alias envl="conda env list"
 
 #gpu monitor
-alias gpu="watch -d -n 0.5 nvidia-smi"
+alias nv="watch -d -n 0.5 nvidia-smi"
+alias gpu="gpustat -i"
 
 # source .bashrc, frequently used in tmux
 alias src="source ~/.bashrc"
