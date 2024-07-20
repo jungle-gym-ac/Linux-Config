@@ -27,7 +27,9 @@ alias project="cd /home/zhangjun/project && act project"
 # hugging face mirror, see https://hf-mirror.com/
 export HF_ENDPOINT=https://hf-mirror.com
 #export HF_HOME=~/.cache/huggingface/hub
+
 #.cache can been soft-linked
+#mv .cache /data1/zhangjun/.cache
 #ln -s /disk/zdata0/home/zhangjun/.cache .cache
 
 #################zj's bashrc config (END)####################
