@@ -15,7 +15,7 @@ rsync -a --delete --progress --log-file="$BACKUP_FOLDER/hr-vlm.log" "$SOURCE_FOL
 
 # 保留最新的三份备份，删除旧的备份
 cd "$BACKUP_FOLDER"
-ls -dt hr-vlm-backup_* | tail -n +4 | xargs rm -rf
+ls -dt hr-vlm-backup_* | tail -n +2 | xargs rm -rf
 
 #chmod +x backup_crontab_rsync.sh
 #export EDITOR="/usr/bin/vim" ; crontab -e
